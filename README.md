@@ -14,7 +14,9 @@ Replace `https://YOUR-CHAT-HOST.example` with the public URL of the server runni
 ></script>
 ```
 
-The versionless `@main` URL means embedders receive the newest widget automatically after the CDN refreshes. The actual chat itself is always loaded directly from your chat host at `/chat`.
+The versionless `@main` URL means embedders receive the newest widget automatically after the CDN refreshes. The actual chat itself is always loaded directly from your chat host at `/chat`, so any frontend change you deploy from your local Nebulo project is visible on every embedded site.
+
+Use `path: "/kchat"` if you want to embed the K-Chat frontend from `chat-git-main/public/` instead. The project's deployment script publishes both `/chat` and `/kchat` frontend assets.
 
 ## Options
 
