@@ -33,7 +33,11 @@
   var frame = shadow.querySelector(".frame");
   var loaded = false;
   function open() {
-    if (!loaded) { frame.src = chatHost + chatPath; loaded = true; }
+    if (!loaded) {
+      // Tell the chat which site it is embedded on so its users get that site's tag.
+      frame.src = chatHost + chatPath + (chatPath.indexOf("?") === -1 ? "?" : "&") + "embedHost=" + encodeURIComponent(location.hostname);
+      loaded = true;
+    }
     panel.hidden = false;
     launcher.setAttribute("aria-expanded", "true");
   }

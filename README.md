@@ -35,6 +35,10 @@ Put this before the script tag to customize the launcher:
 
 `host` in this configuration takes precedence over `data-chat-host`.
 
+## Site tags
+
+The widget adds `?embedHost=<your site's hostname>` when it opens the chat, so the chat can show the right site tag (for example "Platinum") next to your users' names. Nothing to configure.
+
 ## Publishing updates
 
 Commit and push changes to the `main` branch. Existing websites do not need to change their embed code.
